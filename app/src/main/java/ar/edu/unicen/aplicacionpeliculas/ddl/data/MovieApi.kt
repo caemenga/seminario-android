@@ -16,10 +16,11 @@ interface MovieApi {
     @GET("configuration")
     suspend fun getImage(
     ):Response<ConfigImageDto>
+
     @GET("popular")
     suspend fun getPopularMovies(
         @Query("language") language: String = "en-US",
         @Query("page") page: Int = 1
-    ): Response<List<ActivityMovieDto>>
+    ): Response<PopularMoviesDto>
 
 }

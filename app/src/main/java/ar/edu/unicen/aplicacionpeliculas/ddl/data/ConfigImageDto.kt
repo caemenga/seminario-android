@@ -1,7 +1,7 @@
 package ar.edu.unicen.aplicacionpeliculas.ddl.data
-
-import ar.edu.unicen.aplicacionpeliculas.ddl.model.ActivityConfigImage
 import com.google.gson.annotations.SerializedName
+
+//import ar.edu.unicen.aplicacionpeliculas.ddl.model.ActivityConfigImage
 
 class ConfigImageDto(
     @SerializedName("base_url")
@@ -25,7 +25,7 @@ class ConfigImageDto(
         return "ConfinImageDto: base_url: $base_url"
     }
 
-    fun getConfigImage():ActivityConfigImage{
-        return ActivityConfigImage(base_url, poster_sizes.get(4))
-    }
+//    fun getConfigImage():ActivityConfigImage{
+//        return ActivityConfigImage(base_url, poster_sizes.get(4))
+//    }
 }

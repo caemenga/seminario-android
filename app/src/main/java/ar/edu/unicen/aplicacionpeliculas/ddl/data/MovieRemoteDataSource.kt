@@ -46,16 +46,12 @@ class MovieRemoteDataSource
         language: String,
          page: Int
     ): List<ActivityMovie>? {
-        try{
-            val response: Response<List<ActivityMovieDto>> = movieApi.getPopularMovies(language, page)
-
-            val movies = response.body()?.map { it.toMovie() }
-            Log.d("RemoteDataSource", "API Response: ${response.body().toString()}")
-
+        try {
+            val response: Response<PopularMoviesDto> = movieApi.getPopularMovies(language, page)
+            val movies = response.body()?.results?.map { it.toMovie() }
+            Log.d("RemoteDataSource", "API Response: ${response.body()?.results}")
             return movies
-
-        }catch (e: Exception){
-
+        } catch (e: Exception) {
             Log.e("RemoteDataSource", "API Error", e)
             return null
         }
