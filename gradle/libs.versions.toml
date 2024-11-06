@@ -13,6 +13,7 @@ hiltVersion = "2.51.1"
 kaptVersion = "2.0.20"
 retrofit = "2.11.0"
 lifecycleViewModelKtx = "2.5.1"
+glide = "4.16.0"
 
 
 [libraries]
@@ -29,6 +30,7 @@ hilt = {module = "com.google.dagger:hilt-android", version.ref = "hiltVersion"}
 retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewModelKtx" }
+glide = {module = "com.github.bumptech.glide:glide", version.ref="glide"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

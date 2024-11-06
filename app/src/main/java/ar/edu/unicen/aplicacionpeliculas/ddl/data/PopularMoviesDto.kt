@@ -31,7 +31,9 @@ class PopularMoviesDto(
                     popularity = dto.popularity,
                     vote_count = dto.vote_count,
                     vote_average = dto.vote_average,
-                    adult = dto.adult
+                    adult = dto.adult,
+                    poster_path = dto.poster_path,
+                    backdrop_path = dto.backdrop_path
                 )
 
             )

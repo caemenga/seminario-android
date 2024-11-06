@@ -36,7 +36,15 @@ class MainActivity : AppCompatActivity() {
 //        }
         viewModel.getPopularMovies()
         viewModel.movies.onEach{ movies ->
-            biding.moviesList.adapter = MovieAdapter(movies ?: emptyList())
+            biding.moviesList.adapter = MovieAdapter(
+                movies = movies?: emptyList(),
+                onMovieClick = { movie ->
+                    val intent = Intent(this, MovieActivity::class.java).apply {
+                        putExtra("MOVIE_ID", movie.id)  // Pasa el ID de la película
+                    }
+                    startActivity(intent)
+                }
+            )
         }.launchIn(lifecycleScope)
     }
 }

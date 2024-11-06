@@ -52,7 +52,9 @@ class ActivityMovieDto(
                 popularity = popularity,
                 release_date = release_date,
                 vote_average = vote_average,
-                vote_count = vote_count
+                vote_count = vote_count,
+                poster_path = poster_path,
+                backdrop_path = backdrop_path
                 )
             )
     }

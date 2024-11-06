@@ -8,6 +8,8 @@ class ActivityMovieInfo(
     val popularity: Double,
     val vote_average: Double,
     val vote_count: Int,
-    val adult: Boolean
+    val adult: Boolean,
+    val poster_path: String,
+    val backdrop_path: String
 
 )

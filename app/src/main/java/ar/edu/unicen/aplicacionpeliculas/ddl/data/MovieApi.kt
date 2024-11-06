@@ -9,7 +9,7 @@ interface MovieApi {
 
     @GET("movie/{movie_id}")
     suspend fun getMovie(
-        @Path("movie_id") movie_id: Int = 123,
+        @Path("movie_id") movie_id: Int,
         @Query("language") language: String = "en-US"
     ):Response<ActivityMovieDto>
 

@@ -55,5 +55,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.glide)
 
 }

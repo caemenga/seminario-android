@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ImageView
+        android:id="@+id/movie_image"
+        android:layout_width="45.dp"
+        android:layout_height="45.dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12.dp"
+        android:layout_marginStart="10.dp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/movie_title"
         android:layout_width="wrap_content"
@@ -20,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/movie_image"
         app:layout_constraintHorizontal_bias="0"
         android:layout_marginStart="10.dp"/>
 
@@ -33,7 +43,7 @@
         android:textSize="14.sp"
         android:layout_marginTop="12.dp"
         app:layout_constraintTop_toBottomOf="@id/movie_title"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/movie_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         android:layout_marginStart="10.dp"

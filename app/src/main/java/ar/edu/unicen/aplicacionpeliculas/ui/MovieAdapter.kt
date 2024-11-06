@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unicen.aplicacionpeliculas.databinding.ListMoviesActivityBinding
 import ar.edu.unicen.aplicacionpeliculas.ddl.model.ActivityMovie
+import com.bumptech.glide.Glide
 
 class MovieAdapter(
-    private val movies: List<ActivityMovie>
+    private val movies: List<ActivityMovie>,
+    private val onMovieClick: (ActivityMovie) -> Unit
 ): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
@@ -24,14 +26,22 @@ class MovieAdapter(
         val movie = movies[position]
         holder.bind(movie)
     }
-    class MovieViewHolder(
+    inner class MovieViewHolder(
         private val biding: ListMoviesActivityBinding
     ): RecyclerView.ViewHolder(biding.root) {
         fun bind(movie: ActivityMovie) {
             biding.movieTitle.text = movie.title
-            biding.movieOverview.text = movie.movieInfo.overview
+            biding.movieOverview.text = movie.movieInfo.popularity.toString()
 
+            Glide.with(itemView.context)
+                .load("https://image.tmdb.org/t/p/w500/${movie.movieInfo.poster_path}")
+                .into(biding.movieImage)
+
+            biding.root.setOnClickListener{
+                onMovieClick(movie)
+            }
         }
+
 
 
     }
