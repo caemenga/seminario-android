@@ -20,7 +20,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class) //Podes usar tambien el tiempo de vida del ViewModel
 class MovieModule {
-    private val token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTg4ZDg4NjUxM2JhYmFhYjljMzgzNTAwNzJhMzA0MCIsIm5iZiI6MTczMDE0OTkzMS4zNjc5MjcsInN1YiI6IjY3MGU5MDMwZDVmOTNhM2RhMGJjNWRlYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VHzQJPV7HX-fLbs6vF-cAs_Y1LkrS6dpWeBecppaoxY"
+    private val token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTg4ZDg4NjUxM2JhYmFhYjljMzgzNTAwNzJhMzA0MCIsIm5iZiI6MTczMDg2MzY2Ni43NjMyNjc1LCJzdWIiOiI2NzBlOTAzMGQ1ZjkzYTNkYTBiYzVkZWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.8EVf8u6sA-uvGJBk3JOO4xXEU4s_TmO8dV_ZX93mccA"
 
     @Provides
     @MovieSharedPreference

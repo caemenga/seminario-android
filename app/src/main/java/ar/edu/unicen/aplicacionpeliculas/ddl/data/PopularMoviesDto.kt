@@ -37,5 +37,9 @@ class PopularMoviesDto(
             )
         }
     }
+
+    override fun toString(): String {
+        return "entraste al dto, page = ${page.toString()} total de resultados ${total_results.toString()}"
+    }
 }
 

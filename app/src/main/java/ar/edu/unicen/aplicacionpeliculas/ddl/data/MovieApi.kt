@@ -17,7 +17,7 @@ interface MovieApi {
     suspend fun getImage(
     ):Response<ConfigImageDto>
 
-    @GET("popular")
+    @GET("movie/popular")
     suspend fun getPopularMovies(
         @Query("language") language: String = "en-US",
         @Query("page") page: Int = 1
